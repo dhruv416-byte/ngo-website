@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2b3a55"/>
+      <stop offset="1" stop-color="#1f2a3d"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg2)"/>
+  <g fill="#e8722a" opacity="0.85" transform="translate(400,300) scale(2.6)">
+    <ellipse cx="0" cy="18" rx="26" ry="20"/>
+    <ellipse cx="-30" cy="-8" rx="10" ry="14" transform="rotate(-20 -30 -8)"/>
+    <ellipse cx="-10" cy="-18" rx="10" ry="14" transform="rotate(-7 -10 -18)"/>
+    <ellipse cx="12" cy="-18" rx="10" ry="14" transform="rotate(7 12 -18)"/>
+    <ellipse cx="32" cy="-8" rx="10" ry="14" transform="rotate(20 32 -8)"/>
+  </g>
+  <text x="400" y="520" text-anchor="middle" fill="#c6cddb" font-family="Poppins, sans-serif" font-size="20">Replace with a real photo of your team &amp; dogs</text>
+</svg>
