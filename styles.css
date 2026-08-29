@@ -441,7 +441,7 @@ footer.site-footer { background: #16202f; color: #aeb7c7; padding: 56px 0 28px; 
   display: block;
   width: 100%;
   border: 0;
-  min-height: 560px;
+  min-height: 480px;
   background: #fff;
 }
 .lead-form--embed .form-sub { margin-bottom: 6px; }
