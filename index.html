@@ -29,22 +29,46 @@
   </nav>
 </header>
 
-<!-- ============ HERO ============ -->
-<section class="hero">
-  <div class="container">
-    <div class="hero-inner">
+<!-- ============ HERO + LEAD FORM ============ -->
+<section class="hero" id="get-help">
+  <div class="container hero-grid">
+    <div class="hero-copy-top">
       <span class="eyebrow">Community Dog Training • Halifax, West Yorkshire</span>
       <h1>Every Dog Deserves a <span>Second Chance</span> — and Great Training</h1>
       <p class="lead">We're a Halifax-based non-profit helping local families train, understand and keep their dogs — from playful puppies to anxious rescues. Based at Empire House, Mulcture Hall Road.</p>
-      <div class="hero-ctas">
-        <a href="#get-help" class="btn btn-primary">Get Free Training Help</a>
-        <a href="donate.html" class="btn btn-outline">Support Our Work</a>
-      </div>
+    </div>
+
+    <div class="hero-copy-bottom">
+      <ul class="checklist">
+        <li>No obligation — just friendly advice</li>
+        <li>A trainer calls you back within 1 working day</li>
+        <li>Many places free or subsidised</li>
+        <li>Home visits across Calderdale</li>
+      </ul>
       <div class="hero-badges">
         <span>Force-Free Methods</span>
         <span>Serving All of Calderdale</span>
         <span>Rescue-Dog Specialists</span>
       </div>
+    </div>
+
+    <!--
+      LEAD FORM — Tally embed, form ID dWe58A. Lives in the HERO so it is above the
+      fold for ad traffic. The section carries id="get-help", so every existing
+      #get-help link across the site (donate.html, blog CTAs, FAQ, cta-band) lands here.
+      Form collects FOUR fields: name, phone, email, dog's name & breed.
+      Tally Settings still need: self email notifications ON, redirect -> /thanks.
+    -->
+    <div class="lead-form lead-form--embed hero-form">
+      <h3>Leave Your Details — We'll Call You Back</h3>
+      <p class="form-sub">Four quick details. A trainer calls you back within one working day.</p>
+      <iframe
+        src="https://tally.so/embed/dWe58A?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1"
+        data-tally-src="https://tally.so/embed/dWe58A?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1"
+        width="100%"
+        height="600"
+        title="Request Training Help"></iframe>
+      <p class="form-note">We only use your details to reply to this enquiry. No spam, ever.</p>
     </div>
   </div>
 </section>
@@ -149,53 +173,6 @@
         <p>"They helped us when we were close to giving our dog up. The behaviour plan changed everything. This charity is a lifeline."</p>
         <footer>— Owner, Brighouse</footer>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ LEAD FORM ============ -->
-<section class="lead-section" id="get-help">
-  <div class="container lead-wrap">
-    <div class="lead-copy">
-      <span class="eyebrow" style="background:rgba(255,255,255,0.12); color:#ffce9e">Get Started</span>
-      <h2>Leave Your Details — We'll Call You Back</h2>
-      <p>Just your name, number and your dog's breed. One of our trainers will ring you within one working day to talk through the right program, available dates and costs (many places are free or subsidised).</p>
-      <ul class="checklist">
-        <li>No obligation — just friendly advice</li>
-        <li>Reply within 1 working day</li>
-        <li>Home visits available across Calderdale</li>
-        <li>Based at Empire House, Mulcture Hall Rd, Halifax HX1 1SP</li>
-      </ul>
-    </div>
-
-    <!--
-      LEAD FORM — Tally embed (free plan: unlimited submissions + dashboard).
-      SETUP (one time):
-        1. Create the form at https://tally.so (owner's account) with these fields, in order:
-             Your name *            short answer, required
-             Phone *                phone number, required
-             Email *                email, required
-             Dog's name & breed     short answer, optional
-           (Owner removed the Program dropdown and the "What's going on?" field on 2026-08-30 —
-            site copy was rewritten to match. If either is ever added back, revert that copy:
-            see TALLY-FORM-SPEC.md.)
-        2. In Tally → form → Settings, turn ON "Self email notifications" (sends each lead to the
-           owner's inbox as well as the dashboard) and set "Redirect on completion" to
-           https://ngo-website-murex.vercel.app/thanks
-        3. Publish, then Share → Embed → copy the form ID out of the tally.so/embed/XXXXXX URL
-        4. Replace REPLACE_WITH_TALLY_FORM_ID below with that ID and push.
-      Leads then live in the Tally dashboard (and can sync to Google Sheets from Integrations).
-    -->
-    <div class="lead-form lead-form--embed">
-      <h3>Request Training Help</h3>
-      <p class="form-sub">Four quick details. A trainer calls you back within one working day.</p>
-      <iframe
-        src="https://tally.so/embed/dWe58A?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1"
-        data-tally-src="https://tally.so/embed/dWe58A?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1"
-        width="100%"
-        height="600"
-        title="Request Training Help"></iframe>
-      <p class="form-note">We only use your details to reply to this enquiry. No spam, ever.</p>
     </div>
   </div>
 </section>

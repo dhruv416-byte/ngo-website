@@ -21,7 +21,11 @@ still configured alongside `deploy`).
 - **Deploys:** auto — any push to `main` redeploys to Vercel in ~30s. No build command; framework preset "Other".
 
 ## Files
-- `index.html` — homepage: hero, stats, 6 training programs, about, testimonials, LEAD FORM (#get-help), FAQ, footer
+- `index.html` — homepage: HERO WITH LEAD FORM (`id="get-help"`, form above the fold), stats,
+  6 training programs, about, testimonials, FAQ, From the Blog, CTA band, footer.
+  The form moved into the hero on 2026-08-30 for ad traffic; the old standalone lead section
+  was deleted so there is only ONE Tally iframe on the page. On mobile the hero uses
+  `grid-template-areas` to put the form directly under the headline, before the checklist.
 - `donate.html` — Donate tab. IMPORTANT: NO payment links by owner's decision — every donation button/amount card redirects to the lead form (index.html#get-help)
 - `thanks.html` — post-form-submit thank-you page
 - `blog/index.html` — blog listing page (`/blog`), card grid of all posts

@@ -134,12 +134,35 @@ header {
 /* ============ Hero ============ */
 .hero {
   background:
-    linear-gradient(100deg, rgba(250, 245, 238, 0.97) 38%, rgba(250, 245, 238, 0.6) 60%, rgba(250, 245, 238, 0.15)),
+    linear-gradient(100deg, rgba(250, 245, 238, 0.97) 30%, rgba(250, 245, 238, 0.82) 55%, rgba(250, 245, 238, 0.55)),
     url("hero-dog.svg") right center / cover no-repeat, var(--cream);
-  padding: 90px 0 100px;
+  padding: 64px 0 72px;
 }
 
-.hero-inner { max-width: 620px; }
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-areas:
+    "top  form"
+    "bot  form";
+  grid-template-rows: auto 1fr;
+  column-gap: 52px;
+  align-items: start;
+}
+.hero-copy-top { grid-area: top; max-width: 620px; }
+.hero-copy-bottom { grid-area: bot; max-width: 620px; }
+.hero-form { grid-area: form; }
+
+.hero-copy-bottom .checklist { margin-bottom: 22px; }
+
+/* Form card sitting in the hero, above the fold */
+.hero-form {
+  position: sticky;
+  top: 92px;
+  box-shadow: 0 22px 55px rgba(31, 42, 61, 0.16);
+  border: 1px solid var(--line);
+}
+.hero-form h3 { font-size: 1.35rem; margin-bottom: 6px; }
 
 .hero h1 {
   font-size: clamp(2.2rem, 5vw, 3.4rem);
@@ -319,6 +342,18 @@ footer.site-footer { background: #16202f; color: #aeb7c7; padding: 56px 0 28px; 
 @media (max-width: 900px) {
   .grid-3, .amounts { grid-template-columns: 1fr 1fr; }
   .split, .lead-wrap { grid-template-columns: 1fr; gap: 36px; }
+  /* On phones the form must come straight after the headline - ad traffic
+     should not have to scroll past a checklist to reach it. */
+  .hero-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "top" "form" "bot";
+    grid-template-rows: auto auto auto;
+    row-gap: 30px;
+  }
+  .hero-form { position: static; }
+  .hero { padding: 40px 0 52px; }
+  .hero h1 { font-size: clamp(1.85rem, 7vw, 2.6rem); }
+  .hero p.lead { font-size: 1.05rem; margin-bottom: 4px; }
   .stats .container { grid-template-columns: 1fr 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
