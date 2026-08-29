@@ -1,5 +1,9 @@
 # Tally Form Spec — "Request Training Help"
 
+> **STATUS 2026-08-30:** form is BUILT and wired in — ID `dWe58A`, live embed verified.
+> Outstanding: the Program dropdown options do not match this spec (see "Known mismatch" at
+> the bottom), and the Settings below have not been confirmed.
+
 Build this form at **https://tally.so** in the owner's own account, then paste the form ID into
 `index.html` (search for `REPLACE_WITH_TALLY_FORM_ID`).
 
@@ -71,3 +75,24 @@ Paste that over `REPLACE_WITH_TALLY_FORM_ID` in `index.html` and push — Vercel
 ## Known limitation
 Free plan shows a small **"Made with Tally"** mark on the form. Removing it is the Pro plan
 ($24/mo as of 30 Aug 2026). Everything else needed here is free.
+
+
+---
+
+## Known mismatch — fix in Tally (2026-08-30)
+The live form's Program dropdown currently reads:
+`Basic Obedience, Advanced Obedience, Puppy Training, Agility, Behavior Modification,
+Protection Training, Service Dog Training, Tracking`
+
+Problems:
+- **Protection Training** contradicts the site's force-free positioning (stated in the About
+  section, the FAQ, and the lead-reactivity blog post). Remove it.
+- **Agility** and **Tracking** are not programs the site offers.
+- **Rescue Dog Rehabilitation** and **Dog Owner Workshop** are missing — both are listed
+  programs, and Rescue Rehab is the subject of a blog post that funnels into this form.
+- **"I want to donate / support the trust"** is missing. Every button on `donate.html` points
+  at this form, so donors currently land here with nothing to select.
+- "Behavior" is US spelling; the site is `en-GB` throughout.
+
+Replace with the eight options listed under "Field 5" above. No code change or redeploy needed —
+the form ID stays the same.
