@@ -14,6 +14,9 @@ Plain HTML/CSS — no framework, no build step.
 - `index.html` — homepage: hero, stats, 6 training programs, about, testimonials, LEAD FORM (#get-help), FAQ, footer
 - `donate.html` — Donate tab. IMPORTANT: NO payment links by owner's decision — every donation button/amount card redirects to the lead form (index.html#get-help)
 - `thanks.html` — post-form-submit thank-you page
+- `blog/index.html` — blog listing page (`/blog`), card grid of all posts
+- `blog/<slug>.html` — individual posts (`/blog/<slug>` thanks to cleanUrls). Currently 3:
+  puppy-first-week-at-home, reactive-dog-on-lead, rescue-dog-first-30-days
 - `styles.css` — all styling (orange accent #e8722a, Poppins/Nunito fonts)
 - `hero-dog.svg`, `about-dog.svg` — placeholder art, meant to be replaced with real photos
 - `vercel.json` — cleanUrls
@@ -24,14 +27,22 @@ Plain HTML/CSS — no framework, no build step.
 - Phone/email: not provided yet — do not invent
 
 ## PENDING WORK (in priority order)
-1. **Lead form is NOT wired**: `index.html` form action is `https://formsubmit.co/REPLACE_WITH_YOUR_EMAIL`.
-   Replace with the owner's real email, push, then submit the form once on the live site and
-   click FormSubmit's confirmation link to activate. Leads then arrive as emails to that inbox.
+1. **Lead form is NOT wired**: form now posts to Web3Forms (owner chose it — free, 250/mo, no account).
+   `index.html` hidden field `access_key` is still `REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY`.
+   Get the key at https://web3forms.com (enter the lead email, they mail the key back — no signup),
+   paste it in, push. The `redirect` hidden field points at the live /thanks page — update it if
+   a custom domain is added. Owner ruled out GHL for this site: "whatever is free just not GHL".
 2. Real NGO name, phone, email, charity number — swap in when the owner provides them.
 3. Owner wants this site for a Google Ads account (possibly Ad Grants — which would additionally
    need a UK registered charity + custom domain; the free .vercel.app URL is fine for regular paid Ads).
 4. Custom domain: add in Vercel → Project → Settings → Domains when purchased.
 5. Vercel 2FA setup was skipped during onboarding — recommend enabling.
+
+## Adding a new blog post
+Copy any file in `blog/`, change the `<title>`, meta description, canonical, date/read-time in
+`.post-meta`, `<h1>`, and body. Then add a matching `<article class="post-card">` to BOTH
+`blog/index.html` and the "From the Blog" section in `index.html` (homepage shows the newest 3).
+No build step — it's live on push.
 
 ## Rules learned from the owner
 - Do NOT use LocalSites Pro / other website builders — hand-coded + Vercel only.

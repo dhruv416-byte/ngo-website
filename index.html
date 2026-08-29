@@ -21,6 +21,7 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="#programs">Programs</a></li>
       <li><a href="#about">About Us</a></li>
+      <li><a href="/blog">Blog</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="#get-help" class="btn btn-outline" style="padding:10px 22px">Get Help</a></li>
       <li><a href="donate.html" class="btn btn-primary">❤ Donate</a></li>
@@ -168,20 +169,23 @@
     </div>
 
     <!--
-      LEAD FORM — powered by FormSubmit (no backend needed).
-      SETUP (one time): replace REPLACE_WITH_YOUR_EMAIL below with the email
-      that should receive leads, deploy, submit the form once, and click the
-      confirmation link FormSubmit emails you. After that every submission
-      lands in your inbox. (Alternatives: Formspree, Web3Forms, Tally.)
+      LEAD FORM — powered by Web3Forms (free, 250 submissions/month, no backend).
+      SETUP (one time, ~1 minute):
+        1. Go to https://web3forms.com, enter the email that should receive leads,
+           and they email you an "access key" (a UUID). No account or password needed.
+        2. Replace REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY below with that key.
+        3. Push to main — Vercel redeploys in ~30s. Submit the form once to test.
+      Leads then arrive as email to that inbox. Nothing else to configure.
     -->
-    <form class="lead-form" action="https://formsubmit.co/REPLACE_WITH_YOUR_EMAIL" method="POST">
+    <form class="lead-form" action="https://api.web3forms.com/submit" method="POST">
       <h3>Request Training Help</h3>
       <p class="form-sub">Takes 30 seconds. We'll reply within one working day.</p>
 
-      <input type="hidden" name="_subject" value="New training lead — website form" />
-      <input type="hidden" name="_captcha" value="true" />
-      <input type="hidden" name="_next" value="thanks.html" />
-      <input type="text" name="_honey" style="display:none" />
+      <input type="hidden" name="access_key" value="REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY" />
+      <input type="hidden" name="subject" value="New training lead — website form" />
+      <input type="hidden" name="from_name" value="Halifax Dog Training Trust website" />
+      <input type="hidden" name="redirect" value="https://ngo-website-gamma-livid.vercel.app/thanks" />
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
 
       <div class="form-row">
         <div class="field">
@@ -262,6 +266,44 @@
   </div>
 </section>
 
+<!-- ============ FROM THE BLOG ============ -->
+<section id="blog">
+  <div class="container">
+    <div class="center">
+      <span class="eyebrow">Advice &amp; Guides</span>
+      <h2 class="section-title">From the Blog</h2>
+      <p class="section-sub" style="margin-left:auto;margin-right:auto">Free, force-free training advice from our trainers — no sign-up, nothing to unlock.</p>
+    </div>
+    <div class="post-grid">
+
+      <article class="post-card">
+        <div class="post-meta">28 AUGUST 2026 · 5 MIN READ</div>
+        <h2><a href="/blog/puppy-first-week-at-home">Your Puppy's First Week at Home</a></h2>
+        <p>The first seven days set the tone for the next fifteen years. Sleep, toilet training, the crying — and what to stop worrying about.</p>
+        <a class="post-link" href="/blog/puppy-first-week-at-home">Read post →</a>
+      </article>
+
+      <article class="post-card">
+        <div class="post-meta">21 AUGUST 2026 · 6 MIN READ</div>
+        <h2><a href="/blog/reactive-dog-on-lead">Why Your Dog Lunges on the Lead</a></h2>
+        <p>A lunging, barking dog on a walk isn't being naughty or dominant — it's usually scared. Here's what actually helps.</p>
+        <a class="post-link" href="/blog/reactive-dog-on-lead">Read post →</a>
+      </article>
+
+      <article class="post-card">
+        <div class="post-meta">14 AUGUST 2026 · 5 MIN READ</div>
+        <h2><a href="/blog/rescue-dog-first-30-days">The First 30 Days With a Rescue Dog</a></h2>
+        <p>The dog you bring home is not the dog you'll have in a month. A week-by-week guide to settling a rescue.</p>
+        <a class="post-link" href="/blog/rescue-dog-first-30-days">Read post →</a>
+      </article>
+
+    </div>
+    <div class="center" style="margin-top:34px">
+      <a href="/blog" class="btn btn-outline">Read all posts</a>
+    </div>
+  </div>
+</section>
+
 <!-- ============ CTA BAND ============ -->
 <section class="cta-band">
   <div class="container">
@@ -293,6 +335,7 @@
         <h4>Quick Links</h4>
         <ul>
           <li><a href="#about">About Us</a></li>
+          <li><a href="/blog">Blog</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="donate.html">Donate</a></li>
           <li><a href="#get-help">Contact</a></li>
