@@ -28,13 +28,15 @@ Plain HTML/CSS — no framework, no build step.
 - Phone/email: not provided yet — do not invent
 
 ## PENDING WORK (in priority order)
-1. **Lead form is WIRED but not live**: Tally embed, form ID `dWe58A` (owner chose Tally on
-   2026-08-30 — free plan gives unlimited submissions + a dashboard, which email-only tools don't).
-   Embed verified working locally; NOT yet pushed to Vercel.
-   OUTSTANDING: (a) Program dropdown options in Tally don't match the site — see
-   "Known mismatch" in `TALLY-FORM-SPEC.md`, includes "Protection Training" which contradicts
-   the site's force-free positioning; (b) confirm Tally Settings: self email notifications ON,
-   redirect on completion → /thanks.
+1. **Lead form is LIVE**: Tally embed, form ID `dWe58A` (owner chose Tally on 2026-08-30 —
+   free plan gives unlimited submissions + a dashboard, which email-only tools don't).
+   The form collects FOUR fields only: name, phone, email, dog's name & breed. On 2026-08-30 the
+   owner deleted the Program dropdown and the "What's going on?" message field, so all site copy
+   was rewritten to promise a CALL BACK rather than asking visitors to describe their problem.
+   **If either field is ever added back, that copy must be revisited** (homepage lead section,
+   FAQ answer 4, footer "Request a call back", all 3 blog post CTAs, blog listing CTA, donate.html).
+   STILL UNCONFIRMED by the owner: Tally Settings → self email notifications ON, and
+   redirect on completion → /thanks. Without notifications, leads sit unseen in Tally.
    Owner ruled out GHL for this site ("whatever is free just not GHL"), and Formspree was
    rejected because its free tier only archives submissions for 30 days.
 2. Real NGO name, phone, email, charity number — swap in when the owner provides them.
