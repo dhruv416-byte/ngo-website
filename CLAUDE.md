@@ -5,9 +5,19 @@ Static website for an NGO (dog training charity template) styled after k9ti.org 
 Plain HTML/CSS — no framework, no build step.
 
 ## Where everything lives
-- **Live site (Vercel):** https://ngo-website-gamma-livid.vercel.app
-- **GitHub repo:** https://github.com/dhruvsunoly1234-cpu/ngo-website (account: dhruvsunoly1234-cpu)
-- **Vercel project:** team `samsharma3295-2728s-projects`, project `ngo-website` (Hobby plan)
+- **Live site (Vercel):** https://ngo-website-murex.vercel.app  ← CURRENT, deployed 2026-08-30
+- **GitHub repo:** https://github.com/dhruv416-byte/ngo-website (account: dhruv416-byte) ← CURRENT
+- **Vercel project:** team `dhruv-s-projects11` ("dhruv's projects", Hobby), project `ngo-website`
+
+### Why the repo/host moved (2026-08-30)
+The original repo `dhruvsunoly1234-cpu/ngo-website` and its Vercel project (team
+`samsharma3295-2728s-projects`, URL `ngo-website-gamma-livid.vercel.app`) are on accounts this
+machine is NOT signed into — both the terminal git credential and the Chrome session are
+`dhruv416-byte`, which has no write access there. With ads waiting, the owner chose to redeploy
+on the accounts we do control. **The old repo and old URL are frozen at the pre-blog version
+(commit 886d045) and are no longer maintained.** If access to the original account is ever
+restored, `git push origin main` from this repo will bring it up to date (remote `origin` is
+still configured alongside `deploy`).
 - **Deploys:** auto — any push to `main` redeploys to Vercel in ~30s. No build command; framework preset "Other".
 
 ## Files

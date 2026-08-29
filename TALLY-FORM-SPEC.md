@@ -57,7 +57,7 @@ Not sure — need advice
 
 1. **Self email notifications** → ON, to the inbox that should receive leads.
    Without this you only see leads when you log in to Tally.
-2. **Redirect on completion** → `https://ngo-website-gamma-livid.vercel.app/thanks`
+2. **Redirect on completion** → `https://ngo-website-murex.vercel.app/thanks`
    (update this if a custom domain is added later).
 3. **Respondent notifications / autoresponse** → optional. Nice touch: a short
    "we've got your message, we'll reply within one working day" email.
