@@ -20,6 +20,7 @@ Plain HTML/CSS — no framework, no build step.
 - `styles.css` — all styling (orange accent #e8722a, Poppins/Nunito fonts)
 - `hero-dog.svg`, `about-dog.svg` — placeholder art, meant to be replaced with real photos
 - `vercel.json` — cleanUrls
+- `TALLY-FORM-SPEC.md` — exact fields/settings to rebuild the lead form in Tally
 
 ## Business facts (owner-provided)
 - Address: Empire House, Mulcture Hall Rd, Halifax HX1 1SP, UK
@@ -27,11 +28,12 @@ Plain HTML/CSS — no framework, no build step.
 - Phone/email: not provided yet — do not invent
 
 ## PENDING WORK (in priority order)
-1. **Lead form is NOT wired**: form now posts to Web3Forms (owner chose it — free, 250/mo, no account).
-   `index.html` hidden field `access_key` is still `REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY`.
-   Get the key at https://web3forms.com (enter the lead email, they mail the key back — no signup),
-   paste it in, push. The `redirect` hidden field points at the live /thanks page — update it if
-   a custom domain is added. Owner ruled out GHL for this site: "whatever is free just not GHL".
+1. **Lead form is NOT wired**: form is now a **Tally embed** (owner chose Tally on 2026-08-30 —
+   free plan gives unlimited submissions + a dashboard, which email-only tools don't).
+   `index.html` still has `REPLACE_WITH_TALLY_FORM_ID` in the iframe's `data-tally-src`.
+   Build the form per `TALLY-FORM-SPEC.md`, paste the ID in, push.
+   Owner ruled out GHL for this site ("whatever is free just not GHL"), and Formspree was
+   rejected because its free tier only archives submissions for 30 days.
 2. Real NGO name, phone, email, charity number — swap in when the owner provides them.
 3. Owner wants this site for a Google Ads account (possibly Ad Grants — which would additionally
    need a UK registered charity + custom domain; the free .vercel.app URL is fine for regular paid Ads).

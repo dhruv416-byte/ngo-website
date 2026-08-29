@@ -226,7 +226,7 @@ header {
 .lead-copy p { color: #c6cddb; margin-bottom: 22px; }
 .lead-copy .checklist li { color: #dfe5f0; }
 
-form.lead-form {
+.lead-form {
   background: #fff;
   border-radius: var(--radius);
   padding: 34px 30px;
@@ -434,3 +434,14 @@ footer.site-footer { background: #16202f; color: #aeb7c7; padding: 56px 0 28px; 
 .post-more a { color: var(--accent); font-weight: 600; }
 
 .nav-links a.is-current { color: var(--accent); }
+
+/* Tally embed sits inside the same white card as the old hand-coded form */
+.lead-form--embed { padding: 26px 22px 22px; }
+.lead-form--embed iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+  min-height: 560px;
+  background: #fff;
+}
+.lead-form--embed .form-sub { margin-bottom: 6px; }

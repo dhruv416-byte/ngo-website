@@ -169,69 +169,33 @@
     </div>
 
     <!--
-      LEAD FORM — powered by Web3Forms (free, 250 submissions/month, no backend).
-      SETUP (one time, ~1 minute):
-        1. Go to https://web3forms.com, enter the email that should receive leads,
-           and they email you an "access key" (a UUID). No account or password needed.
-        2. Replace REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY below with that key.
-        3. Push to main — Vercel redeploys in ~30s. Submit the form once to test.
-      Leads then arrive as email to that inbox. Nothing else to configure.
+      LEAD FORM — Tally embed (free plan: unlimited submissions + dashboard).
+      SETUP (one time):
+        1. Create the form at https://tally.so (owner's account) with these fields, in order:
+             Your name *            short answer, required
+             Phone *                phone number, required
+             Email *                email, required
+             Dog's name & breed     short answer, optional
+             Program *              dropdown, required — options listed in TALLY-FORM-SPEC.md
+             What's going on? *     long answer, required
+        2. In Tally → form → Settings, turn ON "Self email notifications" (sends each lead to the
+           owner's inbox as well as the dashboard) and set "Redirect on completion" to
+           https://ngo-website-gamma-livid.vercel.app/thanks
+        3. Publish, then Share → Embed → copy the form ID out of the tally.so/embed/XXXXXX URL
+        4. Replace REPLACE_WITH_TALLY_FORM_ID below with that ID and push.
+      Leads then live in the Tally dashboard (and can sync to Google Sheets from Integrations).
     -->
-    <form class="lead-form" action="https://api.web3forms.com/submit" method="POST">
+    <div class="lead-form lead-form--embed">
       <h3>Request Training Help</h3>
       <p class="form-sub">Takes 30 seconds. We'll reply within one working day.</p>
-
-      <input type="hidden" name="access_key" value="REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY" />
-      <input type="hidden" name="subject" value="New training lead — website form" />
-      <input type="hidden" name="from_name" value="Halifax Dog Training Trust website" />
-      <input type="hidden" name="redirect" value="https://ngo-website-gamma-livid.vercel.app/thanks" />
-      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
-
-      <div class="form-row">
-        <div class="field">
-          <label for="name">Your name *</label>
-          <input id="name" name="name" type="text" required placeholder="Jane Smith" />
-        </div>
-        <div class="field">
-          <label for="phone">Phone *</label>
-          <input id="phone" name="phone" type="tel" required placeholder="07xxx xxxxxx" />
-        </div>
-      </div>
-
-      <div class="field">
-        <label for="email">Email *</label>
-        <input id="email" name="email" type="email" required placeholder="you@example.com" />
-      </div>
-
-      <div class="form-row">
-        <div class="field">
-          <label for="dog">Dog's name &amp; breed</label>
-          <input id="dog" name="dog" type="text" placeholder="Rex — Labrador" />
-        </div>
-        <div class="field">
-          <label for="program">Program *</label>
-          <select id="program" name="program" required>
-            <option value="">Choose…</option>
-            <option>Puppy Training</option>
-            <option>Obedience Training</option>
-            <option>Behaviour &amp; Reactivity Help</option>
-            <option>Rescue Dog Rehabilitation</option>
-            <option>Service &amp; Therapy Dog Training</option>
-            <option>Dog Owner Workshop</option>
-            <option>I want to donate / support the trust</option>
-            <option>Not sure — need advice</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="field">
-        <label for="message">What's going on? *</label>
-        <textarea id="message" name="message" rows="4" required placeholder="Tell us a little about your dog and what you'd like help with…"></textarea>
-      </div>
-
-      <button type="submit" class="btn btn-primary">Send My Request</button>
+      <iframe
+        data-tally-src="https://tally.so/embed/REPLACE_WITH_TALLY_FORM_ID?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1"
+        loading="lazy"
+        width="100%"
+        height="560"
+        title="Request Training Help"></iframe>
       <p class="form-note">We only use your details to reply to this enquiry. No spam, ever.</p>
-    </form>
+    </div>
   </div>
 </section>
 
@@ -356,5 +320,7 @@
   </div>
 </footer>
 
+<!-- Tally embed loader -->
+<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(null==d.querySelector('script[src="'+w+'"]')){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
 </body>
 </html>
