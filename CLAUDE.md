@@ -29,8 +29,10 @@ still configured alongside `deploy`).
 - `donate.html` — Donate tab. IMPORTANT: NO payment links by owner's decision — every donation button/amount card redirects to the lead form (index.html#get-help)
 - `thanks.html` — post-form-submit thank-you page
 - `blog/index.html` — blog listing page (`/blog`), card grid of all posts
-- `blog/<slug>.html` — individual posts (`/blog/<slug>` thanks to cleanUrls). Currently 3:
-  puppy-first-week-at-home, reactive-dog-on-lead, rescue-dog-first-30-days
+- `blog/<slug>.html` — individual posts (`/blog/<slug>` thanks to cleanUrls). Currently 8,
+  newest first: dog-training-cost-halifax, puppy-first-week-at-home, stop-puppy-biting,
+  stop-dog-pulling-on-lead, dog-recall-training, reactive-dog-on-lead, dog-separation-anxiety,
+  rescue-dog-first-30-days. Every post ends with a CTA to `/#get-help` plus 2 cross-links.
 - `styles.css` — all styling (orange accent #e8722a, Poppins/Nunito fonts)
 - `hero-dog.svg`, `about-dog.svg` — placeholder art, meant to be replaced with real photos
 - `vercel.json` — cleanUrls
@@ -64,6 +66,9 @@ Copy any file in `blog/`, change the `<title>`, meta description, canonical, dat
 `.post-meta`, `<h1>`, and body. Then add a matching `<article class="post-card">` to BOTH
 `blog/index.html` and the "From the Blog" section in `index.html` (homepage shows the newest 3).
 No build step — it's live on push.
+
+The 8 current posts were generated from one template so the markup is identical across all of
+them — if you change the post layout, change it in every file or the set drifts apart.
 
 ## Rules learned from the owner
 - Do NOT use LocalSites Pro / other website builders — hand-coded + Vercel only.
