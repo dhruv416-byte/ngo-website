@@ -38,6 +38,14 @@ still configured alongside `deploy`).
 - `vercel.json` — cleanUrls
 - `TALLY-FORM-SPEC.md` — exact fields/settings to rebuild the lead form in Tally
 
+## Google Ads tracking (added 2026-09-09)
+Global site tag `AW-356459871` is in `<head>` on ALL 12 pages. Verified firing live
+(gtag.js loads, viewthroughconversion + 1p-user-list requests confirmed).
+**Any new page MUST get the same snippet** or it drops out of remarketing.
+The CONVERSION event is scaffolded but COMMENTED OUT in `thanks.html` — it needs a
+conversion action created in Google Ads and its `send_to` label pasted in. Until then
+Ads sees page views and remarketing only, NOT leads.
+
 ## Business facts (owner-provided)
 - Address: Empire House, Mulcture Hall Rd, Halifax HX1 1SP, UK
 - Name "Halifax Dog Training Trust" is a PLACEHOLDER — real NGO name pending
