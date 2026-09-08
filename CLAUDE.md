@@ -48,7 +48,9 @@ Ads sees page views and remarketing only, NOT leads.
 
 ## Business facts (owner-provided)
 - Address: Empire House, Mulcture Hall Rd, Halifax HX1 1SP, UK
-- Name "Halifax Dog Training Trust" is a PLACEHOLDER — real NGO name pending
+- Name: **Calderdale Lighthouse** (set by the owner 2026-09-09, replacing the
+  placeholder "Halifax Dog Training Trust" across all 12 pages). The 🐾 paw mark was KEPT
+  in the logo and footer — the new name says nothing about dogs, so the paw carries that.
 - Phone/email: not provided yet — do not invent
 
 ## PENDING WORK (in priority order)
