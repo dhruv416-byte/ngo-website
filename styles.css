@@ -480,3 +480,40 @@ footer.site-footer { background: #16202f; color: #aeb7c7; padding: 56px 0 28px; 
   background: #fff;
 }
 .lead-form--embed .form-sub { margin-bottom: 6px; }
+
+/* ============ Legal pages ============ */
+.legal-body h2 { font-size: 1.35rem; margin: 34px 0 12px; }
+.legal-body p, .legal-body li { color: var(--ink); }
+.legal-body ul, .legal-body ol { margin: 0 0 20px 22px; }
+.legal-body li { margin-bottom: 8px; }
+
+.legal-note {
+  background: var(--accent-soft);
+  border: 1px solid #f2d9c4;
+  border-left: 4px solid var(--accent);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 0 0 28px;
+  font-size: 0.95rem;
+}
+.legal-note code {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 0.9em;
+}
+
+.legal-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 22px;
+  font-size: 0.95rem;
+}
+.legal-table th, .legal-table td {
+  border: 1px solid var(--line);
+  padding: 10px 14px;
+  text-align: left;
+  vertical-align: top;
+}
+.legal-table th { background: var(--cream); font-family: "Poppins", sans-serif; font-size: 0.9rem; }

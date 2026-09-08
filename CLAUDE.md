@@ -36,6 +36,9 @@ still configured alongside `deploy`).
 - `styles.css` — all styling (orange accent #e8722a, Poppins/Nunito fonts)
 - `hero-dog.svg`, `about-dog.svg` — placeholder art, meant to be replaced with real photos
 - `vercel.json` — cleanUrls
+- `privacy.html` / `terms.html` — UK GDPR privacy notice and site terms (`/privacy`, `/terms`),
+  linked from the footer of ALL 14 pages. Both contain `[ ]` placeholders that MUST be filled
+  before ads run: charity number, contact email, phone, ICO number.
 - `TALLY-FORM-SPEC.md` — exact fields/settings to rebuild the lead form in Tally
 
 ## Google Ads tracking (added 2026-09-09)
@@ -70,6 +73,13 @@ Ads sees page views and remarketing only, NOT leads.
    need a UK registered charity + custom domain; the free .vercel.app URL is fine for regular paid Ads).
 4. Custom domain: add in Vercel → Project → Settings → Domains when purchased.
 5. Vercel 2FA setup was skipped during onboarding — recommend enabling.
+6. **COOKIE CONSENT BANNER IS MISSING.** The Google Ads tag fires on page load with no consent.
+   Under UK PECR, advertising/remarketing cookies need consent BEFORE being set. The privacy
+   policy says so openly and flags it as outstanding. Fix = a consent banner wired to Google
+   Consent Mode v2 (`ad_storage`/`ad_user_data`/`ad_personalization` denied until accepted).
+7. **Google Ad Grants eligibility is NOT met yet** (if that is the route): needs a registered
+   UK charity number, a domain the charity owns (a free `*.vercel.app` subdomain will not pass),
+   and real org contact details. Regular paid Google Ads has no such requirement.
 
 ## Adding a new blog post
 Copy any file in `blog/`, change the `<title>`, meta description, canonical, date/read-time in
